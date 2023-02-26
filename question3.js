@@ -4,7 +4,7 @@ const calculateBalance = () => {
     let dailyValues = balance;
     let newDailyValues = dailyValues;
 
-    // Percorre o array e retorna os dias com valor diferente de 0
+    // Percorre o array e retorna os dias com valor diferente de 0 (sem faturamento)
     for(let i = 0; i < dailyValues.length; i++) {
         newDailyValues = dailyValues.filter(value => value.valor !== 0);
     }
@@ -28,7 +28,7 @@ const calculateBalance = () => {
 
     // Percorre o array e retorna os dias com valor superior a media mensal
     const greaterThanMonthlyAverage = newDailyValues.filter(value => value.valor > monthlyAverage)
-    
+
     console.log('Menor valor: ', lowerValue);
     console.log('Maior valor : ', higherValue);
     console.log('Media mensal : ', monthlyAverage)

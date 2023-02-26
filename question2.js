@@ -4,7 +4,7 @@ const fibonacci = (n, numberToFind) => {
     // Numeros iniciais da sequencia
     const sequence = [0, 1];
 
-    // Loop que determina os proximos numberos da sequencia e adiciona no array
+    // Loop que determina os proximos numeros da sequencia e adiciona no array
     for (let i = 2; i < n; i++) {
         const nextNumber = sequence[i - 1] + sequence[i - 2];
         sequence.push(nextNumber);
@@ -22,6 +22,5 @@ const fibonacci = (n, numberToFind) => {
 
     return sequence;
 }
-
 
 console.log(fibonacci(10, 5))
